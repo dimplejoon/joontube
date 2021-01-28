@@ -1,0 +1,14 @@
+//여기가 모든 페이지들의 토태가 되는 HTML을 만든 곳
+//home 화면과 다른 화면들의 코드가 모두 main 태그 안에 들어가도록 작업
+//만약에 header 한 부분에 수정해줘야할 때 다 수정을 해줘야하는데 템플릿이 수백개 존재하는 포르젝트가 많다. 그런 경우를 위해서 레이아웃을 만드는 것이다.
+doctype html
+html
+    head
+        title JoonTube
+    body
+        header
+            h1 JoonTube
+        main 
+            block content
+        footer
+            span &copy; JoonTube

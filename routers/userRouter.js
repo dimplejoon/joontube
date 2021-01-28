@@ -1,6 +1,12 @@
 import express from "express";
+import { changePassword, editProfile, userDetail } from "../controllers/userController";
+import routes from "../routes";
 
-const userRouter = express.Router(); //app들은 다 default로 export 해주었으나 얘는 해준 적 없다. 
+const userRouter = express.Router();
+
+userRouter.get(routes.userDetail, userDetail);
+userRouter.get(routes.editProfile, editProfile);
+userRouter.get(routes.changePassword, changePassword);
 
 export default userRouter;
 

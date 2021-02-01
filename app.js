@@ -14,7 +14,7 @@ import globalRouter from "./routers/globalRouter";
 
 const app = express(); //1. index.js가 실행되고 그 다음에 app(application)이 route가 존재하는지 확인한다
 
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
